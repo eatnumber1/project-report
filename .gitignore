@@ -5,7 +5,6 @@
 *.log
 *.out
 *.pyg
-*.pdf
 *.bcf
 *.fdb_latexmk
 *.fls
@@ -15,3 +14,4 @@ pdflatex/refman.idx
 pdflatex/refman.ilg
 pdflatex/refman.ind
 pdflatex/refman.toc
+pdflatex/*.pdf
