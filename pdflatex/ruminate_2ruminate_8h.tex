@@ -1,0 +1,192 @@
+\hypertarget{ruminate_2ruminate_8h}{\subsection{ruminate/ruminate.h File Reference}
+\label{ruminate_2ruminate_8h}\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}}
+}
+
+
+Top-\/level and utility functions.  
+
+
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ruminate_2ruminate_8h_a1d17861ce087a20632d29f3b6e09dccb}{ruminate\-\_\-get\-\_\-type}(expr, error)
+\begin{DoxyCompactList}\small\item\em Get the type of an expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{ruminate_2ruminate_8h_ac433975dd90cd26b6d649ce703c5ad50}{ruminate\-\_\-destroy} (G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em De-\/initialize the ruminate framework. \end{DoxyCompactList}\item 
+bool \hyperlink{ruminate_2ruminate_8h_a1515fe702340c7449b9248d4321fe8b4}{ruminate\-\_\-init} (const char $\ast$program\-\_\-name, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Initialize the ruminate framework. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_frame_list}{R\-Frame\-List} $\ast$ \hyperlink{ruminate_2ruminate_8h_ace611a174dd203875ab2ea450ed0080b}{ruminate\-\_\-backtrace} (G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Generate a backtrace. \end{DoxyCompactList}\item 
+G\-Ptr\-Array $\ast$ \hyperlink{ruminate_2ruminate_8h_aef42cddc37dff5754aeb709425418489}{ruminate\-\_\-get\-\_\-types\-\_\-by\-\_\-name} (const char $\ast$type\-\_\-name, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Retrieve R\-Types by name. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type}{R\-Type} $\ast$ \hyperlink{ruminate_2ruminate_8h_aeb372297a5feab4cb66e051256fd3a22}{ruminate\-\_\-get\-\_\-type\-\_\-by\-\_\-variable\-\_\-name} (const char $\ast$, G\-Error $\ast$$\ast$)
+\item 
+\hyperlink{struct_r_string}{R\-String} $\ast$ \hyperlink{ruminate_2ruminate_8h_abb5e25c0e9693583a164a1fd5c346a03}{ruminate\-\_\-get\-\_\-function\-\_\-name} (void $\ast$addr, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the name of a function by address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Top-\/level and utility functions. 
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{ruminate_2ruminate_8h_a1d17861ce087a20632d29f3b6e09dccb}{\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}!ruminate\-\_\-get\-\_\-type@{ruminate\-\_\-get\-\_\-type}}
+\index{ruminate\-\_\-get\-\_\-type@{ruminate\-\_\-get\-\_\-type}!ruminate/ruminate.h@{ruminate/ruminate.\-h}}
+\paragraph[{ruminate\-\_\-get\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}\#define ruminate\-\_\-get\-\_\-type(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{error}
+\end{DoxyParamCaption}
+)}}\label{ruminate_2ruminate_8h_a1d17861ce087a20632d29f3b6e09dccb}
+
+
+Get the type of an expression. 
+
+Gets an instance of an \hyperlink{struct_r_type}{R\-Type} representing the type of the provided expression.
+
+Note that you must first have initialized the ruminate library via a call to \hyperlink{ruminate_2ruminate_8h_a1515fe702340c7449b9248d4321fe8b4}{ruminate\-\_\-init()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em expr} & The expression to determine the type of. \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to an \hyperlink{struct_r_type}{R\-Type} or {\ttfamily N\-U\-L\-L} if an error occurred. This \hyperlink{struct_r_type}{R\-Type} must be freed using \hyperlink{struct_r_type_abc901fe63aef5d4696ccd9bea136ea97}{r\-\_\-type\-\_\-unref()}. 
+\end{DoxyReturn}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{ruminate_2ruminate_8h_ace611a174dd203875ab2ea450ed0080b}{\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}!ruminate\-\_\-backtrace@{ruminate\-\_\-backtrace}}
+\index{ruminate\-\_\-backtrace@{ruminate\-\_\-backtrace}!ruminate/ruminate.h@{ruminate/ruminate.\-h}}
+\paragraph[{ruminate\-\_\-backtrace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Frame\-List}$\ast$ ruminate\-\_\-backtrace (
+\begin{DoxyParamCaption}
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{ruminate_2ruminate_8h_ace611a174dd203875ab2ea450ed0080b}
+
+
+Generate a backtrace. 
+
+This function generates a backtrace of the caller's call stack.
+
+\begin{DoxyReturn}{Returns}
+A pointer to an \hyperlink{struct_r_frame_list}{R\-Frame\-List} representing the frames found in the caller's call stack. This \hyperlink{struct_r_frame_list}{R\-Frame\-List} must be freed using \hyperlink{struct_r_frame_list_ab2f57f2088ab983a15cfae4dd59fa80d}{r\-\_\-frame\-\_\-list\-\_\-unref()}. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]This method should return a G\-Ptr\-Array rather than a custom list implementation. \end{DoxyRefDesc}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{ruminate_2ruminate_8h_ac433975dd90cd26b6d649ce703c5ad50}{\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}!ruminate\-\_\-destroy@{ruminate\-\_\-destroy}}
+\index{ruminate\-\_\-destroy@{ruminate\-\_\-destroy}!ruminate/ruminate.h@{ruminate/ruminate.\-h}}
+\paragraph[{ruminate\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}bool ruminate\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{ruminate_2ruminate_8h_ac433975dd90cd26b6d649ce703c5ad50}
+
+
+De-\/initialize the ruminate framework. 
+
+This function frees all internal resources of the ruminate framework. Undefined behavior results if any ruminate framework functions are called after this function returns {\ttfamily true}.
+
+\begin{DoxyReturn}{Returns}
+Whether or not an error occurred. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{ruminate_2ruminate_8h_abb5e25c0e9693583a164a1fd5c346a03}{\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}!ruminate\-\_\-get\-\_\-function\-\_\-name@{ruminate\-\_\-get\-\_\-function\-\_\-name}}
+\index{ruminate\-\_\-get\-\_\-function\-\_\-name@{ruminate\-\_\-get\-\_\-function\-\_\-name}!ruminate/ruminate.h@{ruminate/ruminate.\-h}}
+\paragraph[{ruminate\-\_\-get\-\_\-function\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-String}$\ast$ ruminate\-\_\-get\-\_\-function\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{addr, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{ruminate_2ruminate_8h_abb5e25c0e9693583a164a1fd5c346a03}
+
+
+Get the name of a function by address. 
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_r_string}{R\-String} containing the name of the function. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em addr} & the address of the function to get the name of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{ruminate_2ruminate_8h_aeb372297a5feab4cb66e051256fd3a22}{\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}!ruminate\-\_\-get\-\_\-type\-\_\-by\-\_\-variable\-\_\-name@{ruminate\-\_\-get\-\_\-type\-\_\-by\-\_\-variable\-\_\-name}}
+\index{ruminate\-\_\-get\-\_\-type\-\_\-by\-\_\-variable\-\_\-name@{ruminate\-\_\-get\-\_\-type\-\_\-by\-\_\-variable\-\_\-name}!ruminate/ruminate.h@{ruminate/ruminate.\-h}}
+\paragraph[{ruminate\-\_\-get\-\_\-type\-\_\-by\-\_\-variable\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type}$\ast$ ruminate\-\_\-get\-\_\-type\-\_\-by\-\_\-variable\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{G\-Error $\ast$$\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{ruminate_2ruminate_8h_aeb372297a5feab4cb66e051256fd3a22}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]document \end{DoxyRefDesc}
+\hypertarget{ruminate_2ruminate_8h_aef42cddc37dff5754aeb709425418489}{\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}!ruminate\-\_\-get\-\_\-types\-\_\-by\-\_\-name@{ruminate\-\_\-get\-\_\-types\-\_\-by\-\_\-name}}
+\index{ruminate\-\_\-get\-\_\-types\-\_\-by\-\_\-name@{ruminate\-\_\-get\-\_\-types\-\_\-by\-\_\-name}!ruminate/ruminate.h@{ruminate/ruminate.\-h}}
+\paragraph[{ruminate\-\_\-get\-\_\-types\-\_\-by\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}G\-Ptr\-Array$\ast$ ruminate\-\_\-get\-\_\-types\-\_\-by\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{type\-\_\-name, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{ruminate_2ruminate_8h_aef42cddc37dff5754aeb709425418489}
+
+
+Retrieve R\-Types by name. 
+
+This function retrieves all the types which are named {\itshape type\-\_\-name}.
+
+\begin{DoxyReturn}{Returns}
+A G\-Ptr\-Array of the types which are named {\itshape type\-\_\-name} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type\-\_\-name} & the name of the types to find \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{ruminate_2ruminate_8h_a1515fe702340c7449b9248d4321fe8b4}{\index{ruminate/ruminate.\-h@{ruminate/ruminate.\-h}!ruminate\-\_\-init@{ruminate\-\_\-init}}
+\index{ruminate\-\_\-init@{ruminate\-\_\-init}!ruminate/ruminate.h@{ruminate/ruminate.\-h}}
+\paragraph[{ruminate\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}bool ruminate\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{program\-\_\-name, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{ruminate_2ruminate_8h_a1515fe702340c7449b9248d4321fe8b4}
+
+
+Initialize the ruminate framework. 
+
+This must be called before any other ruminate functions.
+
+The argument {\itshape program\-\_\-name} must either be the name of this program or {\ttfamily N\-U\-L\-L}. If null, {\ttfamily g\-\_\-get\-\_\-prgname()} will be called to get the name of this program. If the program name has not been previously set via a call to {\ttfamily g\-\_\-set\-\_\-prgname()}, an error will occur.
+
+\begin{DoxyReturn}{Returns}
+Whether or not an error occurred. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\href{https://developer.gnome.org/glib/2.28/glib-Miscellaneous-Utility-Functions.html#g-set-prgname}{\tt g\-\_\-set\-\_\-prgname} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em program\-\_\-name} & the name of this program, e.\-g. {\ttfamily argv\mbox{[}0\mbox{]}} or {\ttfamily N\-U\-L\-L} \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}

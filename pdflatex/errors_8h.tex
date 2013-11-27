@@ -1,0 +1,92 @@
+\hypertarget{errors_8h}{\subsection{ruminate/errors.h File Reference}
+\label{errors_8h}\index{ruminate/errors.\-h@{ruminate/errors.\-h}}
+}
+
+
+Error handling facilities.  
+
+
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{errors_8h_a4485d35c67e4845c47a7fdd873cc20d5}{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R}
+\begin{DoxyCompactList}\small\item\em The error quark representing errors produced by this library. \end{DoxyCompactList}\item 
+\#define \hyperlink{errors_8h_a2056c4b5b8b5761d8fe7776f09247405}{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-N\-O\-\_\-\-E\-R\-R\-O\-R}
+\begin{DoxyCompactList}\small\item\em The error quark representing errors produced by the standard C library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{errors_8h_a0bff341b89fef12fd9562ce9a23f8f54}{Ruminate\-Error} \{ \\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-S\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-L\-L\-D\-B\-\_\-\-E\-R\-R\-O\-R}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-R\-A\-N\-G\-E}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-P\-R\-I\-M\-I\-T\-I\-V\-E\-\_\-\-T\-Y\-P\-E}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-T\-Y\-P\-E}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E\-\_\-\-T\-Y\-P\-E}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-C\-E}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-S\-T\-D\-L\-I\-B}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-S\-H\-O\-R\-T\-\_\-\-R\-E\-A\-D}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-P\-R\-G\-N\-A\-M\-E}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-U\-N\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D}, 
+\\*
+{\bfseries R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-U\-N\-S\-P\-E\-C}
+ \}
+\begin{DoxyCompactList}\small\item\em The various errors produced by ruminate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Error handling facilities. Every function which takes as an argument a {\ttfamily G\-Error $\ast$$\ast$} reports errors through this pointer.
+
+In brief, pass {\ttfamily N\-U\-L\-L} as the {\ttfamily G\-Error $\ast$$\ast$} argument to functions or pass a pointer to a {\ttfamily N\-U\-L\-L} {\ttfamily G\-Error $\ast$} to recieve a {\ttfamily G\-Error} when an error occurs.
+
+\begin{DoxySeeAlso}{See Also}
+\href{https://developer.gnome.org/glib/2.34/glib-Error-Reporting.html}{\tt G\-Error} 
+\end{DoxySeeAlso}
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{errors_8h_a2056c4b5b8b5761d8fe7776f09247405}{\index{errors.\-h@{errors.\-h}!R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-N\-O\-\_\-\-E\-R\-R\-O\-R@{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-N\-O\-\_\-\-E\-R\-R\-O\-R}}
+\index{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-N\-O\-\_\-\-E\-R\-R\-O\-R@{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-N\-O\-\_\-\-E\-R\-R\-O\-R}!errors.h@{errors.\-h}}
+\paragraph[{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-N\-O\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-N\-O\-\_\-\-E\-R\-R\-O\-R}}\label{errors_8h_a2056c4b5b8b5761d8fe7776f09247405}
+
+
+The error quark representing errors produced by the standard C library. 
+
+This quark will be placed in the {\ttfamily domain} field of a {\ttfamily G\-Error} produced when an error occurrs.
+
+\begin{DoxySeeAlso}{See Also}
+\href{https://developer.gnome.org/glib/2.34/glib-Quarks.html}{\tt G\-Quark} 
+\end{DoxySeeAlso}
+\hypertarget{errors_8h_a4485d35c67e4845c47a7fdd873cc20d5}{\index{errors.\-h@{errors.\-h}!R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R@{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R}}
+\index{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R@{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R}!errors.h@{errors.\-h}}
+\paragraph[{R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-U\-M\-I\-N\-A\-T\-E\-\_\-\-E\-R\-R\-O\-R}}\label{errors_8h_a4485d35c67e4845c47a7fdd873cc20d5}
+
+
+The error quark representing errors produced by this library. 
+
+This quark will be placed in the {\ttfamily domain} field of a {\ttfamily G\-Error} produced when an error occurrs.
+
+\begin{DoxySeeAlso}{See Also}
+\href{https://developer.gnome.org/glib/2.34/glib-Quarks.html}{\tt G\-Quark} 
+\end{DoxySeeAlso}
+
+
+\subsubsection{Enumeration Type Documentation}
+\hypertarget{errors_8h_a0bff341b89fef12fd9562ce9a23f8f54}{\index{errors.\-h@{errors.\-h}!Ruminate\-Error@{Ruminate\-Error}}
+\index{Ruminate\-Error@{Ruminate\-Error}!errors.h@{errors.\-h}}
+\paragraph[{Ruminate\-Error}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ruminate\-Error}}}\label{errors_8h_a0bff341b89fef12fd9562ce9a23f8f54}
+
+
+The various errors produced by ruminate. 
+
+These will be placed in the {\ttfamily code} field of a {\ttfamily G\-Error} produced when an error occurrs. 

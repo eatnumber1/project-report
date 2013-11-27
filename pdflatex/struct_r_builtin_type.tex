@@ -1,0 +1,109 @@
+\hypertarget{struct_r_builtin_type}{\subsection{R\-Builtin\-Type Struct Reference}
+\label{struct_r_builtin_type}\index{R\-Builtin\-Type@{R\-Builtin\-Type}}
+}
+
+
+An opaque struct representing a builtin type.  
+
+
+
+
+Inheritance diagram for R\-Builtin\-Type\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{struct_r_builtin_type__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{builtin__type_8h_a245d1724f16dd995c090e6666722c80c}{R\-Builtin\-Type\-Id} \hyperlink{struct_r_builtin_type_afaf0b8970072c1587ebc7936eaccbcee}{r\-\_\-builtin\-\_\-type\-\_\-id} (\hyperlink{struct_r_builtin_type}{R\-Builtin\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the builtin type identifier of this builtin type. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_r_builtin_type_a93b47b692eee1bdead79045599b47c1f}{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-signed} (\hyperlink{struct_r_builtin_type}{R\-Builtin\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Determine if this type is signed. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_r_builtin_type_a539615767bc3af7470da1e73456bfe10}{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-unsigned} (\hyperlink{struct_r_builtin_type}{R\-Builtin\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Determine if this type is unsigned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a builtin type. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_builtin_type_afaf0b8970072c1587ebc7936eaccbcee}{\index{R\-Builtin\-Type@{R\-Builtin\-Type}!r\-\_\-builtin\-\_\-type\-\_\-id@{r\-\_\-builtin\-\_\-type\-\_\-id}}
+\index{r\-\_\-builtin\-\_\-type\-\_\-id@{r\-\_\-builtin\-\_\-type\-\_\-id}!RBuiltinType@{R\-Builtin\-Type}}
+\paragraph[{r\-\_\-builtin\-\_\-type\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Builtin\-Type\-Id} r\-\_\-builtin\-\_\-type\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Builtin\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_builtin_type_afaf0b8970072c1587ebc7936eaccbcee}
+
+
+Get the builtin type identifier of this builtin type. 
+
+The R\-Builtin\-Type\-Id of this \hyperlink{struct_r_builtin_type}{R\-Builtin\-Type} represents the real type of this builtin type.
+
+\begin{DoxyReturn}{Returns}
+the real type of this builtin type 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the builtin type to retrieve the id of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_builtin_type_a93b47b692eee1bdead79045599b47c1f}{\index{R\-Builtin\-Type@{R\-Builtin\-Type}!r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-signed@{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-signed}}
+\index{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-signed@{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-signed}!RBuiltinType@{R\-Builtin\-Type}}
+\paragraph[{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-signed}]{\setlength{\rightskip}{0pt plus 5cm}bool r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-signed (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Builtin\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_builtin_type_a93b47b692eee1bdead79045599b47c1f}
+
+
+Determine if this type is signed. 
+
+Note that the {\ttfamily char} type can be neither signed nor unsigned.
+
+\begin{DoxyReturn}{Returns}
+whether or not this type is signed 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to determine the signedness of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_builtin_type_a539615767bc3af7470da1e73456bfe10}{\index{R\-Builtin\-Type@{R\-Builtin\-Type}!r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-unsigned@{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-unsigned}}
+\index{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-unsigned@{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-unsigned}!RBuiltinType@{R\-Builtin\-Type}}
+\paragraph[{r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-unsigned}]{\setlength{\rightskip}{0pt plus 5cm}bool r\-\_\-builtin\-\_\-type\-\_\-is\-\_\-unsigned (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Builtin\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_builtin_type_a539615767bc3af7470da1e73456bfe10}
+
+
+Determine if this type is unsigned. 
+
+Note that the {\ttfamily char} type can be neither signed nor unsigned.
+
+\begin{DoxyReturn}{Returns}
+whether or not this type is unsigned 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to determine the signedness of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/\hyperlink{builtin__type_8h}{builtin\-\_\-type.\-h}\end{DoxyCompactItemize}

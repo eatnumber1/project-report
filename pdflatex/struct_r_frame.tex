@@ -1,0 +1,182 @@
+\hypertarget{struct_r_frame}{\subsection{R\-Frame Struct Reference}
+\label{struct_r_frame}\index{R\-Frame@{R\-Frame}}
+}
+
+
+An opaque struct representing a call stack frame.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_r_frame_afe2c073f2e782ec284f7a5a390ab9725}{r\-\_\-frame\-\_\-ref} (\hyperlink{struct_r_frame}{R\-Frame} $\ast$frame)
+\begin{DoxyCompactList}\small\item\em Increment the reference count of this \hyperlink{struct_r_frame}{R\-Frame}. \end{DoxyCompactList}\item 
+void \hyperlink{struct_r_frame_a1326ea97655ac6fb1ad27b663dd6bba4}{r\-\_\-frame\-\_\-unref} (\hyperlink{struct_r_frame}{R\-Frame} $\ast$frame)
+\begin{DoxyCompactList}\small\item\em Decrement the reference count of this \hyperlink{struct_r_frame}{R\-Frame}. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_string}{R\-String} $\ast$ \hyperlink{struct_r_frame_a1a8357f0188f0700229479fd10a5215e}{r\-\_\-frame\-\_\-function\-\_\-name} (\hyperlink{struct_r_frame}{R\-Frame} $\ast$frame, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the name of the function this \hyperlink{struct_r_frame}{R\-Frame} represents. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_string}{R\-String} $\ast$ \hyperlink{struct_r_frame_a15348a02f579ddd131d970875f91c521}{r\-\_\-frame\-\_\-module\-\_\-name} (\hyperlink{struct_r_frame}{R\-Frame} $\ast$frame, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the name of the module which contains this frame. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_string}{R\-String} $\ast$ \hyperlink{struct_r_frame_adc61d8ba92f3b69d72057332c01395e3}{r\-\_\-frame\-\_\-compile\-\_\-unit\-\_\-name} (\hyperlink{struct_r_frame}{R\-Frame} $\ast$frame, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the name of the compile unit which contains this frame. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type}{R\-Type} $\ast$ \hyperlink{struct_r_frame_ad19bde1c7cf7daa99e3b31d6bf51ec03}{r\-\_\-frame\-\_\-function\-\_\-type} (\hyperlink{struct_r_frame}{R\-Frame} $\ast$frame, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the type of this function. \end{DoxyCompactList}\item 
+uintmax\-\_\-t \hyperlink{struct_r_frame_abc5a8bda5af788716af8fa31bae19f03}{r\-\_\-frame\-\_\-line} (\hyperlink{struct_r_frame}{R\-Frame} $\ast$frame, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the line number that this frame is at. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a call stack frame. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_frame_adc61d8ba92f3b69d72057332c01395e3}{\index{R\-Frame@{R\-Frame}!r\-\_\-frame\-\_\-compile\-\_\-unit\-\_\-name@{r\-\_\-frame\-\_\-compile\-\_\-unit\-\_\-name}}
+\index{r\-\_\-frame\-\_\-compile\-\_\-unit\-\_\-name@{r\-\_\-frame\-\_\-compile\-\_\-unit\-\_\-name}!RFrame@{R\-Frame}}
+\paragraph[{r\-\_\-frame\-\_\-compile\-\_\-unit\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-String} $\ast$ r\-\_\-frame\-\_\-compile\-\_\-unit\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame} $\ast$}]{frame, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_adc61d8ba92f3b69d72057332c01395e3}
+
+
+Get the name of the compile unit which contains this frame. 
+
+This is usually the name of the file which defined this function.
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_r_string}{R\-String} containing the name of this compile unit. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame to get the compile unit name of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_a1a8357f0188f0700229479fd10a5215e}{\index{R\-Frame@{R\-Frame}!r\-\_\-frame\-\_\-function\-\_\-name@{r\-\_\-frame\-\_\-function\-\_\-name}}
+\index{r\-\_\-frame\-\_\-function\-\_\-name@{r\-\_\-frame\-\_\-function\-\_\-name}!RFrame@{R\-Frame}}
+\paragraph[{r\-\_\-frame\-\_\-function\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-String} $\ast$ r\-\_\-frame\-\_\-function\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame} $\ast$}]{frame, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_a1a8357f0188f0700229479fd10a5215e}
+
+
+Get the name of the function this \hyperlink{struct_r_frame}{R\-Frame} represents. 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_r_string}{R\-String} containing the name of this function. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame to get the name of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_ad19bde1c7cf7daa99e3b31d6bf51ec03}{\index{R\-Frame@{R\-Frame}!r\-\_\-frame\-\_\-function\-\_\-type@{r\-\_\-frame\-\_\-function\-\_\-type}}
+\index{r\-\_\-frame\-\_\-function\-\_\-type@{r\-\_\-frame\-\_\-function\-\_\-type}!RFrame@{R\-Frame}}
+\paragraph[{r\-\_\-frame\-\_\-function\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type} $\ast$ r\-\_\-frame\-\_\-function\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame} $\ast$}]{frame, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_ad19bde1c7cf7daa99e3b31d6bf51ec03}
+
+
+Get the type of this function. 
+
+\begin{DoxyReturn}{Returns}
+an \hyperlink{struct_r_type}{R\-Type} representing the type of this function. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame to get the type of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_abc5a8bda5af788716af8fa31bae19f03}{\index{R\-Frame@{R\-Frame}!r\-\_\-frame\-\_\-line@{r\-\_\-frame\-\_\-line}}
+\index{r\-\_\-frame\-\_\-line@{r\-\_\-frame\-\_\-line}!RFrame@{R\-Frame}}
+\paragraph[{r\-\_\-frame\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}uintmax\-\_\-t r\-\_\-frame\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame} $\ast$}]{frame, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_abc5a8bda5af788716af8fa31bae19f03}
+
+
+Get the line number that this frame is at. 
+
+\begin{DoxyReturn}{Returns}
+the line number that this frame is at 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame to get the line number of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_a15348a02f579ddd131d970875f91c521}{\index{R\-Frame@{R\-Frame}!r\-\_\-frame\-\_\-module\-\_\-name@{r\-\_\-frame\-\_\-module\-\_\-name}}
+\index{r\-\_\-frame\-\_\-module\-\_\-name@{r\-\_\-frame\-\_\-module\-\_\-name}!RFrame@{R\-Frame}}
+\paragraph[{r\-\_\-frame\-\_\-module\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-String} $\ast$ r\-\_\-frame\-\_\-module\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame} $\ast$}]{frame, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_a15348a02f579ddd131d970875f91c521}
+
+
+Get the name of the module which contains this frame. 
+
+This is usually the name of the executable or library.
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_r_string}{R\-String} containing the name of this module. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame to get the module name of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_afe2c073f2e782ec284f7a5a390ab9725}{\index{R\-Frame@{R\-Frame}!r\-\_\-frame\-\_\-ref@{r\-\_\-frame\-\_\-ref}}
+\index{r\-\_\-frame\-\_\-ref@{r\-\_\-frame\-\_\-ref}!RFrame@{R\-Frame}}
+\paragraph[{r\-\_\-frame\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-frame\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame} $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_afe2c073f2e782ec284f7a5a390ab9725}
+
+
+Increment the reference count of this \hyperlink{struct_r_frame}{R\-Frame}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame to increment the reference count of \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_a1326ea97655ac6fb1ad27b663dd6bba4}{\index{R\-Frame@{R\-Frame}!r\-\_\-frame\-\_\-unref@{r\-\_\-frame\-\_\-unref}}
+\index{r\-\_\-frame\-\_\-unref@{r\-\_\-frame\-\_\-unref}!RFrame@{R\-Frame}}
+\paragraph[{r\-\_\-frame\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-frame\-\_\-unref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame} $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_a1326ea97655ac6fb1ad27b663dd6bba4}
+
+
+Decrement the reference count of this \hyperlink{struct_r_frame}{R\-Frame}. 
+
+The \hyperlink{struct_r_frame}{R\-Frame} will be freed if it's reference count drops to zero. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & the frame to decrement the reference count of \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/frame.\-h\end{DoxyCompactItemize}

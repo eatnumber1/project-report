@@ -1,0 +1,86 @@
+\hypertarget{struct_r_aggregate_member}{\subsection{R\-Aggregate\-Member Struct Reference}
+\label{struct_r_aggregate_member}\index{R\-Aggregate\-Member@{R\-Aggregate\-Member}}
+}
+
+
+An opaque struct representing a aggregate member.  
+
+
+
+
+Inheritance diagram for R\-Aggregate\-Member\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{struct_r_aggregate_member__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{aggregate__member_8h_ae66a822b4bce9e1559fef33422de505c}{R\-Aggregate\-Member\-Id} \hyperlink{struct_r_aggregate_member_a3d8b736967820633c1fcd3c91958cdea}{r\-\_\-aggregate\-\_\-member\-\_\-id} (\hyperlink{struct_r_aggregate_member}{R\-Aggregate\-Member} $\ast$member, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the real type identifier of this aggregate member. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_string}{R\-String} $\ast$ \hyperlink{struct_r_aggregate_member_a48fc0de0e9dc5bfba78304194536c919}{r\-\_\-aggregate\-\_\-member\-\_\-name} (\hyperlink{struct_r_aggregate_member}{R\-Aggregate\-Member} $\ast$member, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the name of this aggregate member. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a aggregate member. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{struct_r_aggregate_type}{R\-Aggregate\-Type} 
+\end{DoxySeeAlso}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_aggregate_member_a3d8b736967820633c1fcd3c91958cdea}{\index{R\-Aggregate\-Member@{R\-Aggregate\-Member}!r\-\_\-aggregate\-\_\-member\-\_\-id@{r\-\_\-aggregate\-\_\-member\-\_\-id}}
+\index{r\-\_\-aggregate\-\_\-member\-\_\-id@{r\-\_\-aggregate\-\_\-member\-\_\-id}!RAggregateMember@{R\-Aggregate\-Member}}
+\paragraph[{r\-\_\-aggregate\-\_\-member\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Aggregate\-Member\-Id} r\-\_\-aggregate\-\_\-member\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Aggregate\-Member} $\ast$}]{member, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_aggregate_member_a3d8b736967820633c1fcd3c91958cdea}
+
+
+Get the real type identifier of this aggregate member. 
+
+\begin{DoxyReturn}{Returns}
+the real type of this aggregate member 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em member} & the aggregate member to get the id of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_aggregate_member_a48fc0de0e9dc5bfba78304194536c919}{\index{R\-Aggregate\-Member@{R\-Aggregate\-Member}!r\-\_\-aggregate\-\_\-member\-\_\-name@{r\-\_\-aggregate\-\_\-member\-\_\-name}}
+\index{r\-\_\-aggregate\-\_\-member\-\_\-name@{r\-\_\-aggregate\-\_\-member\-\_\-name}!RAggregateMember@{R\-Aggregate\-Member}}
+\paragraph[{r\-\_\-aggregate\-\_\-member\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-String} $\ast$ r\-\_\-aggregate\-\_\-member\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Aggregate\-Member} $\ast$}]{member, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_aggregate_member_a48fc0de0e9dc5bfba78304194536c919}
+
+
+Get the name of this aggregate member. 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_r_string}{R\-String} containing the name of this aggregate member 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Function argument names return {\ttfamily \char`\"{}\char`\"{}}. I'm not sure it's even possible to get these, so this feature might go away. \end{DoxyRefDesc}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em member} & the aggregate member to get the name of \\
+\hline
+\mbox{\tt in}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/\hyperlink{aggregate__member_8h}{aggregate\-\_\-member.\-h}\end{DoxyCompactItemize}

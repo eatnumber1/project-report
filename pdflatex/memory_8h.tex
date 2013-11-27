@@ -1,0 +1,354 @@
+\hypertarget{memory_8h}{\subsection{ruminate/memory.h File Reference}
+\label{memory_8h}\index{ruminate/memory.\-h@{ruminate/memory.\-h}}
+}
+
+
+Typed reference counted memory allocator.  
+
+
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{memory_8h_ae4d72da6eaa1f49c731f5b467511687e}{r\-\_\-mem\-\_\-malloc}(type, error)
+\begin{DoxyCompactList}\small\item\em Allocate typed memory. \end{DoxyCompactList}\item 
+\#define \hyperlink{memory_8h_a1ce06009f659776d34afd8d13bf656ce}{r\-\_\-mem\-\_\-malloc\-\_\-sized}(type, size, error)
+\begin{DoxyCompactList}\small\item\em Allocate typed memory with size. \end{DoxyCompactList}\item 
+\#define \hyperlink{memory_8h_a021210641e7ca32164d2418531110d73}{r\-\_\-mem\-\_\-calloc}(type, nmemb, error)
+\begin{DoxyCompactList}\small\item\em Allocate zero'ed typed memory. \end{DoxyCompactList}\item 
+\#define \hyperlink{memory_8h_aaeb47cae325a8d6d8818e7d09061ba26}{r\-\_\-mem\-\_\-calloc\-\_\-sized}(type, size, nmemb, error)
+\begin{DoxyCompactList}\small\item\em Allocate zero'ed typed memory, with size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{memory_8h_a75a334c89bf27d2632f88071daedb571}{r\-\_\-mem\-\_\-malloc\-\_\-fn} (\hyperlink{struct_r_type}{R\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Allocate typed memory. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{memory_8h_a42cf0c15546270790d68c1bdbeace960}{r\-\_\-mem\-\_\-malloc\-\_\-sized\-\_\-fn} (\hyperlink{struct_r_type}{R\-Type} $\ast$type, size\-\_\-t size, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Allocate typed memory with size. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{memory_8h_a2b85a89dbd5164e57163ab0efb24f536}{r\-\_\-mem\-\_\-calloc\-\_\-fn} (\hyperlink{struct_r_type}{R\-Type} $\ast$type, size\-\_\-t nmemb, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Allocate zero'ed typed memory. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{memory_8h_ae015932866677442597ed10d3fc8ef2d}{r\-\_\-mem\-\_\-calloc\-\_\-sized\-\_\-fn} (\hyperlink{struct_r_type}{R\-Type} $\ast$type, size\-\_\-t size, size\-\_\-t nmemb, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Allocate zero'ed typed memory, with size. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{memory_8h_a7e3d73f1c02dc3aa939507f6e849631b}{r\-\_\-mem\-\_\-size} (void $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Retrieve the allocated size of typed memory. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{memory_8h_ad5a2b3eedc081c7f097d49678ca23ae4}{r\-\_\-mem\-\_\-ref} (void $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Increment the reference count of typed memory. \end{DoxyCompactList}\item 
+void \hyperlink{memory_8h_a7646f31027040b96f9c37c9d011719ef}{r\-\_\-mem\-\_\-unref} (void $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Decrease the reference count of typed memory. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type}{R\-Type} $\ast$ \hyperlink{memory_8h_a7aba2307bdd9b8f95b24919fee0f3551}{r\-\_\-mem\-\_\-type} (void $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Retrieve the type of typed memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Typed reference counted memory allocator. These functions provide facilities for allocating dynamic memory which you can retrieve the type of via a call to \hyperlink{memory_8h_a7aba2307bdd9b8f95b24919fee0f3551}{r\-\_\-mem\-\_\-type()}. This allows you to retrieve the real type of e.\-x. a {\ttfamily void $\ast$}.
+
+This memory is also reference counted via calls to \hyperlink{memory_8h_ad5a2b3eedc081c7f097d49678ca23ae4}{r\-\_\-mem\-\_\-ref()} and \hyperlink{memory_8h_a7646f31027040b96f9c37c9d011719ef}{r\-\_\-mem\-\_\-unref()}. 
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{memory_8h_a021210641e7ca32164d2418531110d73}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-calloc@{r\-\_\-mem\-\_\-calloc}}
+\index{r\-\_\-mem\-\_\-calloc@{r\-\_\-mem\-\_\-calloc}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-calloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define r\-\_\-mem\-\_\-calloc(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{nmemb, }
+\item[{}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a021210641e7ca32164d2418531110d73}
+
+
+Allocate zero'ed typed memory. 
+
+This macro allocates enough memory for {\itshape nmemb} instances of {\itshape type} sized elements and sets the allocated memory to zero.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type of the memory to allocate \\
+\hline
+\mbox{\tt in}  & {\em nmemb} & the number of {\itshape type} sized members to allocate. \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+\hypertarget{memory_8h_aaeb47cae325a8d6d8818e7d09061ba26}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-calloc\-\_\-sized@{r\-\_\-mem\-\_\-calloc\-\_\-sized}}
+\index{r\-\_\-mem\-\_\-calloc\-\_\-sized@{r\-\_\-mem\-\_\-calloc\-\_\-sized}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-calloc\-\_\-sized}]{\setlength{\rightskip}{0pt plus 5cm}\#define r\-\_\-mem\-\_\-calloc\-\_\-sized(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{size, }
+\item[{}]{nmemb, }
+\item[{}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_aaeb47cae325a8d6d8818e7d09061ba26}
+
+
+Allocate zero'ed typed memory, with size. 
+
+This macro allocates enough memory for {\itshape nmemb} instances of {\itshape size} sized elements and sets the allocated memory to zero.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type of the memory to allocate \\
+\hline
+\mbox{\tt in}  & {\em size} & the size of the memory to allocate. This must be at least as large as the type represented by {\itshape type} \\
+\hline
+\mbox{\tt in}  & {\em nmemb} & the number of {\itshape type} sized members to allocate. \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+\hypertarget{memory_8h_ae4d72da6eaa1f49c731f5b467511687e}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-malloc@{r\-\_\-mem\-\_\-malloc}}
+\index{r\-\_\-mem\-\_\-malloc@{r\-\_\-mem\-\_\-malloc}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-malloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define r\-\_\-mem\-\_\-malloc(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_ae4d72da6eaa1f49c731f5b467511687e}
+
+
+Allocate typed memory. 
+
+This macro allocates memory of size {\ttfamily sizeof(type)} and with type {\itshape type}.
+
+This memory must be freed via a call to \hyperlink{memory_8h_a7646f31027040b96f9c37c9d011719ef}{r\-\_\-mem\-\_\-unref()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type of the memory to allocate \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+\hypertarget{memory_8h_a1ce06009f659776d34afd8d13bf656ce}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-malloc\-\_\-sized@{r\-\_\-mem\-\_\-malloc\-\_\-sized}}
+\index{r\-\_\-mem\-\_\-malloc\-\_\-sized@{r\-\_\-mem\-\_\-malloc\-\_\-sized}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-malloc\-\_\-sized}]{\setlength{\rightskip}{0pt plus 5cm}\#define r\-\_\-mem\-\_\-malloc\-\_\-sized(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{size, }
+\item[{}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a1ce06009f659776d34afd8d13bf656ce}
+
+
+Allocate typed memory with size. 
+
+This macro allocates memory of size {\itshape size} and with type {\itshape type}.
+
+This memory must be freed via a call to \hyperlink{memory_8h_a7646f31027040b96f9c37c9d011719ef}{r\-\_\-mem\-\_\-unref()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type of the memory to allocate \\
+\hline
+\mbox{\tt in}  & {\em size} & the size of the memory to allocate This must be at least as large as the type represented by {\itshape type} \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{memory_8h_a2b85a89dbd5164e57163ab0efb24f536}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-calloc\-\_\-fn@{r\-\_\-mem\-\_\-calloc\-\_\-fn}}
+\index{r\-\_\-mem\-\_\-calloc\-\_\-fn@{r\-\_\-mem\-\_\-calloc\-\_\-fn}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-calloc\-\_\-fn}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ r\-\_\-mem\-\_\-calloc\-\_\-fn (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type, }
+\item[{size\-\_\-t}]{nmemb, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a2b85a89dbd5164e57163ab0efb24f536}
+
+
+Allocate zero'ed typed memory. 
+
+This is the function version of \hyperlink{memory_8h_a021210641e7ca32164d2418531110d73}{r\-\_\-mem\-\_\-calloc()}
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{memory_8h_a021210641e7ca32164d2418531110d73}{r\-\_\-mem\-\_\-calloc} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & an \hyperlink{struct_r_type}{R\-Type} representing the type of the allocated memory \\
+\hline
+\mbox{\tt in}  & {\em nmemb} & the number of {\itshape type} sized elements to allocate memory for \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{memory_8h_ae015932866677442597ed10d3fc8ef2d}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-calloc\-\_\-sized\-\_\-fn@{r\-\_\-mem\-\_\-calloc\-\_\-sized\-\_\-fn}}
+\index{r\-\_\-mem\-\_\-calloc\-\_\-sized\-\_\-fn@{r\-\_\-mem\-\_\-calloc\-\_\-sized\-\_\-fn}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-calloc\-\_\-sized\-\_\-fn}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ r\-\_\-mem\-\_\-calloc\-\_\-sized\-\_\-fn (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type, }
+\item[{size\-\_\-t}]{size, }
+\item[{size\-\_\-t}]{nmemb, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_ae015932866677442597ed10d3fc8ef2d}
+
+
+Allocate zero'ed typed memory, with size. 
+
+This is the function version of \hyperlink{memory_8h_aaeb47cae325a8d6d8818e7d09061ba26}{r\-\_\-mem\-\_\-calloc\-\_\-sized()}
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{memory_8h_aaeb47cae325a8d6d8818e7d09061ba26}{r\-\_\-mem\-\_\-calloc\-\_\-sized} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & an \hyperlink{struct_r_type}{R\-Type} representing the type of the allocated memory \\
+\hline
+\mbox{\tt in}  & {\em size} & size the size of the memory to allocate. This must be at least as large as the type represented by {\itshape type} \\
+\hline
+\mbox{\tt in}  & {\em nmemb} & the number of {\itshape type} sized elements to allocate memory for \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{memory_8h_a75a334c89bf27d2632f88071daedb571}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-malloc\-\_\-fn@{r\-\_\-mem\-\_\-malloc\-\_\-fn}}
+\index{r\-\_\-mem\-\_\-malloc\-\_\-fn@{r\-\_\-mem\-\_\-malloc\-\_\-fn}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-malloc\-\_\-fn}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ r\-\_\-mem\-\_\-malloc\-\_\-fn (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a75a334c89bf27d2632f88071daedb571}
+
+
+Allocate typed memory. 
+
+This is the function version of \hyperlink{memory_8h_ae4d72da6eaa1f49c731f5b467511687e}{r\-\_\-mem\-\_\-malloc()}
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{memory_8h_ae4d72da6eaa1f49c731f5b467511687e}{r\-\_\-mem\-\_\-malloc} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & an \hyperlink{struct_r_type}{R\-Type} representing the type of the allocated memory \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{memory_8h_a42cf0c15546270790d68c1bdbeace960}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-malloc\-\_\-sized\-\_\-fn@{r\-\_\-mem\-\_\-malloc\-\_\-sized\-\_\-fn}}
+\index{r\-\_\-mem\-\_\-malloc\-\_\-sized\-\_\-fn@{r\-\_\-mem\-\_\-malloc\-\_\-sized\-\_\-fn}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-malloc\-\_\-sized\-\_\-fn}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ r\-\_\-mem\-\_\-malloc\-\_\-sized\-\_\-fn (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type, }
+\item[{size\-\_\-t}]{size, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a42cf0c15546270790d68c1bdbeace960}
+
+
+Allocate typed memory with size. 
+
+This is the function version of \hyperlink{memory_8h_a1ce06009f659776d34afd8d13bf656ce}{r\-\_\-mem\-\_\-malloc\-\_\-sized()}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{memory_8h_a1ce06009f659776d34afd8d13bf656ce}{r\-\_\-mem\-\_\-malloc\-\_\-sized} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a pointer to dynamically allocated memory 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & an \hyperlink{struct_r_type}{R\-Type} representing the type of the allocated memory \\
+\hline
+\mbox{\tt in}  & {\em size} & size the size of the memory to allocate. This must be at least as large as the type represented by {\itshape type} \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{memory_8h_ad5a2b3eedc081c7f097d49678ca23ae4}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-ref@{r\-\_\-mem\-\_\-ref}}
+\index{r\-\_\-mem\-\_\-ref@{r\-\_\-mem\-\_\-ref}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ r\-\_\-mem\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_ad5a2b3eedc081c7f097d49678ca23ae4}
+
+
+Increment the reference count of typed memory. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape mem} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem} & the memory to increase the reference count of \\
+\hline
+\end{DoxyParams}
+\hypertarget{memory_8h_a7e3d73f1c02dc3aa939507f6e849631b}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-size@{r\-\_\-mem\-\_\-size}}
+\index{r\-\_\-mem\-\_\-size@{r\-\_\-mem\-\_\-size}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t r\-\_\-mem\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a7e3d73f1c02dc3aa939507f6e849631b}
+
+
+Retrieve the allocated size of typed memory. 
+
+\begin{DoxyReturn}{Returns}
+the allocated size of {\itshape mem} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem} & the typed memory to retrieve the allocated size of \\
+\hline
+\end{DoxyParams}
+\hypertarget{memory_8h_a7aba2307bdd9b8f95b24919fee0f3551}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-type@{r\-\_\-mem\-\_\-type}}
+\index{r\-\_\-mem\-\_\-type@{r\-\_\-mem\-\_\-type}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type}$\ast$ r\-\_\-mem\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a7aba2307bdd9b8f95b24919fee0f3551}
+
+
+Retrieve the type of typed memory. 
+
+\begin{DoxyReturn}{Returns}
+an \hyperlink{struct_r_type}{R\-Type} representing the type of {\itshape mem}. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem} & the memory to retrieve the type of \\
+\hline
+\end{DoxyParams}
+\hypertarget{memory_8h_a7646f31027040b96f9c37c9d011719ef}{\index{memory.\-h@{memory.\-h}!r\-\_\-mem\-\_\-unref@{r\-\_\-mem\-\_\-unref}}
+\index{r\-\_\-mem\-\_\-unref@{r\-\_\-mem\-\_\-unref}!memory.h@{memory.\-h}}
+\paragraph[{r\-\_\-mem\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-mem\-\_\-unref (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}}\label{memory_8h_a7646f31027040b96f9c37c9d011719ef}
+
+
+Decrease the reference count of typed memory. 
+
+This function frees {\itshape mem} if the reference count reaches zero. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem} & the memory to decrease the reference count of \\
+\hline
+\end{DoxyParams}

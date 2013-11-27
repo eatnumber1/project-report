@@ -1,0 +1,146 @@
+\hypertarget{struct_r_type}{\subsection{R\-Type Struct Reference}
+\label{struct_r_type}\index{R\-Type@{R\-Type}}
+}
+
+
+An opaque struct representing a type.  
+
+
+
+
+Inheritance diagram for R\-Type\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_r_type__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{type_8h_a200873d33e0b46e4ae64e4bfd4f7ac9d}{R\-Type\-Id} \hyperlink{struct_r_type_a40ec26771acf938d1d4fd4968272bf43}{r\-\_\-type\-\_\-id} (\hyperlink{struct_r_type}{R\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the type identifier of this type. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_string}{R\-String} $\ast$ \hyperlink{struct_r_type_a3693f92b73c76634fd1ea78521bb4947}{r\-\_\-type\-\_\-name} (\hyperlink{struct_r_type}{R\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the name of this type. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type}{R\-Type} $\ast$ \hyperlink{struct_r_type_a9796d0adc620247438780470f970d1fd}{r\-\_\-type\-\_\-ref} (\hyperlink{struct_r_type}{R\-Type} $\ast$type)
+\begin{DoxyCompactList}\small\item\em Increase the reference count of this type. \end{DoxyCompactList}\item 
+void \hyperlink{struct_r_type_abc901fe63aef5d4696ccd9bea136ea97}{r\-\_\-type\-\_\-unref} (\hyperlink{struct_r_type}{R\-Type} $\ast$type)
+\begin{DoxyCompactList}\small\item\em Decrease the reference count of this. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type}{R\-Type} $\ast$ \hyperlink{struct_r_type_ace0f37441c6f2d1a23f572269ac2d339}{r\-\_\-type\-\_\-pointer} (\hyperlink{struct_r_type}{R\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get an \hyperlink{struct_r_type}{R\-Type} representing a pointer to this type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a type. 
+
+This type can be safely cast to it's sub-\/type which can be determined using \hyperlink{struct_r_type_a40ec26771acf938d1d4fd4968272bf43}{r\-\_\-type\-\_\-id()}. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_type_a40ec26771acf938d1d4fd4968272bf43}{\index{R\-Type@{R\-Type}!r\-\_\-type\-\_\-id@{r\-\_\-type\-\_\-id}}
+\index{r\-\_\-type\-\_\-id@{r\-\_\-type\-\_\-id}!RType@{R\-Type}}
+\paragraph[{r\-\_\-type\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type\-Id} r\-\_\-type\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_a40ec26771acf938d1d4fd4968272bf43}
+
+
+Get the type identifier of this type. 
+
+The R\-Type\-Id of this \hyperlink{struct_r_type}{R\-Type} represents the child type of this \hyperlink{struct_r_type}{R\-Type}, and can be safely cast into that child type.
+
+\begin{DoxyReturn}{Returns}
+the child type of this type. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to retrieve the type id of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_a3693f92b73c76634fd1ea78521bb4947}{\index{R\-Type@{R\-Type}!r\-\_\-type\-\_\-name@{r\-\_\-type\-\_\-name}}
+\index{r\-\_\-type\-\_\-name@{r\-\_\-type\-\_\-name}!RType@{R\-Type}}
+\paragraph[{r\-\_\-type\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-String} $\ast$ r\-\_\-type\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_a3693f92b73c76634fd1ea78521bb4947}
+
+
+Get the name of this type. 
+
+\begin{DoxyReturn}{Returns}
+an \hyperlink{struct_r_string}{R\-String} containing the name of this type. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to retrieve the name of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_ace0f37441c6f2d1a23f572269ac2d339}{\index{R\-Type@{R\-Type}!r\-\_\-type\-\_\-pointer@{r\-\_\-type\-\_\-pointer}}
+\index{r\-\_\-type\-\_\-pointer@{r\-\_\-type\-\_\-pointer}!RType@{R\-Type}}
+\paragraph[{r\-\_\-type\-\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type} $\ast$ r\-\_\-type\-\_\-pointer (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_ace0f37441c6f2d1a23f572269ac2d339}
+
+
+Get an \hyperlink{struct_r_type}{R\-Type} representing a pointer to this type. 
+
+\begin{DoxyReturn}{Returns}
+An \hyperlink{struct_r_type}{R\-Type} representing a pointer to {\itshape type}. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to get a pointer to \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_a9796d0adc620247438780470f970d1fd}{\index{R\-Type@{R\-Type}!r\-\_\-type\-\_\-ref@{r\-\_\-type\-\_\-ref}}
+\index{r\-\_\-type\-\_\-ref@{r\-\_\-type\-\_\-ref}!RType@{R\-Type}}
+\paragraph[{r\-\_\-type\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type} $\ast$ r\-\_\-type\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_a9796d0adc620247438780470f970d1fd}
+
+
+Increase the reference count of this type. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape type} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to increase the reference count of \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_abc901fe63aef5d4696ccd9bea136ea97}{\index{R\-Type@{R\-Type}!r\-\_\-type\-\_\-unref@{r\-\_\-type\-\_\-unref}}
+\index{r\-\_\-type\-\_\-unref@{r\-\_\-type\-\_\-unref}!RType@{R\-Type}}
+\paragraph[{r\-\_\-type\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-type\-\_\-unref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type} $\ast$}]{type}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_abc901fe63aef5d4696ccd9bea136ea97}
+
+
+Decrease the reference count of this. 
+
+This \hyperlink{struct_r_type}{R\-Type} will be freed if the reference count drops to zero. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to decrease the reference count of \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/\hyperlink{type_8h}{type.\-h}\end{DoxyCompactItemize}

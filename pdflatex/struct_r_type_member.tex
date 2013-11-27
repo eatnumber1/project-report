@@ -1,0 +1,137 @@
+\hypertarget{struct_r_type_member}{\subsection{R\-Type\-Member Struct Reference}
+\label{struct_r_type_member}\index{R\-Type\-Member@{R\-Type\-Member}}
+}
+
+
+An opaque struct representing a type member.  
+
+
+
+
+Inheritance diagram for R\-Type\-Member\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{struct_r_type_member__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{type__member_8h_a57b8dacec0c2e6283f307c07aae6fb7f}{R\-Type\-Member\-Id} \hyperlink{struct_r_type_member_af0e43672c62600335cb0569266feb221}{r\-\_\-type\-\_\-member\-\_\-id} (\hyperlink{struct_r_type_member}{R\-Type\-Member} $\ast$member, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the type member id of this \hyperlink{struct_r_type_member}{R\-Type\-Member}. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type}{R\-Type} $\ast$ \hyperlink{struct_r_type_member_a179498126b0805889ffcd113dfdff8f4}{r\-\_\-type\-\_\-member\-\_\-type} (\hyperlink{struct_r_type_member}{R\-Type\-Member} $\ast$member, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the type of this type member. \end{DoxyCompactList}\item 
+ptrdiff\-\_\-t \hyperlink{struct_r_type_member_af192de4185914c999d0445d6a2f424d1}{r\-\_\-type\-\_\-member\-\_\-offset} (\hyperlink{struct_r_type_member}{R\-Type\-Member} $\ast$member, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the offset of this type member into it's container. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type_member}{R\-Type\-Member} $\ast$ \hyperlink{struct_r_type_member_aa097c4e561c9db8aaf141d6d0a163310}{r\-\_\-type\-\_\-member\-\_\-ref} (\hyperlink{struct_r_type_member}{R\-Type\-Member} $\ast$member)
+\begin{DoxyCompactList}\small\item\em Increment the reference count of this \hyperlink{struct_r_type_member}{R\-Type\-Member}. \end{DoxyCompactList}\item 
+void \hyperlink{struct_r_type_member_aab80f39862cb60904fef002d635173f3}{r\-\_\-type\-\_\-member\-\_\-unref} (\hyperlink{struct_r_type_member}{R\-Type\-Member} $\ast$member)
+\begin{DoxyCompactList}\small\item\em Decrement the reference count of this \hyperlink{struct_r_type_member}{R\-Type\-Member}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a type member. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_type_member_af0e43672c62600335cb0569266feb221}{\index{R\-Type\-Member@{R\-Type\-Member}!r\-\_\-type\-\_\-member\-\_\-id@{r\-\_\-type\-\_\-member\-\_\-id}}
+\index{r\-\_\-type\-\_\-member\-\_\-id@{r\-\_\-type\-\_\-member\-\_\-id}!RTypeMember@{R\-Type\-Member}}
+\paragraph[{r\-\_\-type\-\_\-member\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type\-Member\-Id} r\-\_\-type\-\_\-member\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type\-Member} $\ast$}]{member, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_member_af0e43672c62600335cb0569266feb221}
+
+
+Get the type member id of this \hyperlink{struct_r_type_member}{R\-Type\-Member}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em member} & the type member to get the id of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_member_af192de4185914c999d0445d6a2f424d1}{\index{R\-Type\-Member@{R\-Type\-Member}!r\-\_\-type\-\_\-member\-\_\-offset@{r\-\_\-type\-\_\-member\-\_\-offset}}
+\index{r\-\_\-type\-\_\-member\-\_\-offset@{r\-\_\-type\-\_\-member\-\_\-offset}!RTypeMember@{R\-Type\-Member}}
+\paragraph[{r\-\_\-type\-\_\-member\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}ptrdiff\-\_\-t r\-\_\-type\-\_\-member\-\_\-offset (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type\-Member} $\ast$}]{member, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_member_af192de4185914c999d0445d6a2f424d1}
+
+
+Get the offset of this type member into it's container. 
+
+This is the number of bytes into this type member's container (either an \hyperlink{struct_r_array_type}{R\-Array\-Type}, or an \hyperlink{struct_r_aggregate_type}{R\-Aggregate\-Type}) that this member is located.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{struct_r_array_type}{R\-Array\-Type} 
+
+\hyperlink{struct_r_aggregate_type}{R\-Aggregate\-Type} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em member} & the type member to get the offset of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_member_aa097c4e561c9db8aaf141d6d0a163310}{\index{R\-Type\-Member@{R\-Type\-Member}!r\-\_\-type\-\_\-member\-\_\-ref@{r\-\_\-type\-\_\-member\-\_\-ref}}
+\index{r\-\_\-type\-\_\-member\-\_\-ref@{r\-\_\-type\-\_\-member\-\_\-ref}!RTypeMember@{R\-Type\-Member}}
+\paragraph[{r\-\_\-type\-\_\-member\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type\-Member} $\ast$ r\-\_\-type\-\_\-member\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type\-Member} $\ast$}]{member}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_member_aa097c4e561c9db8aaf141d6d0a163310}
+
+
+Increment the reference count of this \hyperlink{struct_r_type_member}{R\-Type\-Member}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em member} & the type member to increment the reference count of \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_member_a179498126b0805889ffcd113dfdff8f4}{\index{R\-Type\-Member@{R\-Type\-Member}!r\-\_\-type\-\_\-member\-\_\-type@{r\-\_\-type\-\_\-member\-\_\-type}}
+\index{r\-\_\-type\-\_\-member\-\_\-type@{r\-\_\-type\-\_\-member\-\_\-type}!RTypeMember@{R\-Type\-Member}}
+\paragraph[{r\-\_\-type\-\_\-member\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type} $\ast$ r\-\_\-type\-\_\-member\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type\-Member} $\ast$}]{member, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_member_a179498126b0805889ffcd113dfdff8f4}
+
+
+Get the type of this type member. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em member} & the type member to get the type of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_type_member_aab80f39862cb60904fef002d635173f3}{\index{R\-Type\-Member@{R\-Type\-Member}!r\-\_\-type\-\_\-member\-\_\-unref@{r\-\_\-type\-\_\-member\-\_\-unref}}
+\index{r\-\_\-type\-\_\-member\-\_\-unref@{r\-\_\-type\-\_\-member\-\_\-unref}!RTypeMember@{R\-Type\-Member}}
+\paragraph[{r\-\_\-type\-\_\-member\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-type\-\_\-member\-\_\-unref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Type\-Member} $\ast$}]{member}
+\end{DoxyParamCaption}
+)}}\label{struct_r_type_member_aab80f39862cb60904fef002d635173f3}
+
+
+Decrement the reference count of this \hyperlink{struct_r_type_member}{R\-Type\-Member}. 
+
+If the reference count reaches zero, this \hyperlink{struct_r_type_member}{R\-Type\-Member} will be freed. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em member} & the type member to decrement the reference count of \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/\hyperlink{type__member_8h}{type\-\_\-member.\-h}\end{DoxyCompactItemize}

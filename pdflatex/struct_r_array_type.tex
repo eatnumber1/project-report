@@ -1,0 +1,82 @@
+\hypertarget{struct_r_array_type}{\subsection{R\-Array\-Type Struct Reference}
+\label{struct_r_array_type}\index{R\-Array\-Type@{R\-Array\-Type}}
+}
+
+
+An opaque struct representing an array type.  
+
+
+
+
+Inheritance diagram for R\-Array\-Type\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{struct_r_array_type__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{struct_r_array_type_a91fdc9370c7373eae37b12372042a9d6}{r\-\_\-array\-\_\-type\-\_\-size} (\hyperlink{struct_r_array_type}{R\-Array\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the size of this array. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_type_member}{R\-Type\-Member} $\ast$ \hyperlink{struct_r_array_type_a7efce78c90306eca927204d10b72f4e4}{r\-\_\-array\-\_\-type\-\_\-member\-\_\-at} (\hyperlink{struct_r_array_type}{R\-Array\-Type} $\ast$type, size\-\_\-t index, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the type of a member of this array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing an array type. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_array_type_a7efce78c90306eca927204d10b72f4e4}{\index{R\-Array\-Type@{R\-Array\-Type}!r\-\_\-array\-\_\-type\-\_\-member\-\_\-at@{r\-\_\-array\-\_\-type\-\_\-member\-\_\-at}}
+\index{r\-\_\-array\-\_\-type\-\_\-member\-\_\-at@{r\-\_\-array\-\_\-type\-\_\-member\-\_\-at}!RArrayType@{R\-Array\-Type}}
+\paragraph[{r\-\_\-array\-\_\-type\-\_\-member\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type\-Member} $\ast$ r\-\_\-array\-\_\-type\-\_\-member\-\_\-at (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Array\-Type} $\ast$}]{type, }
+\item[{size\-\_\-t}]{index, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_array_type_a7efce78c90306eca927204d10b72f4e4}
+
+
+Get the type of a member of this array. 
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{struct_r_type_member}{R\-Type\-Member} representing the type of the argument at index {\itshape index} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to get the member type of \\
+\hline
+\mbox{\tt in}  & {\em index} & the index in the array to get the member type of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_array_type_a91fdc9370c7373eae37b12372042a9d6}{\index{R\-Array\-Type@{R\-Array\-Type}!r\-\_\-array\-\_\-type\-\_\-size@{r\-\_\-array\-\_\-type\-\_\-size}}
+\index{r\-\_\-array\-\_\-type\-\_\-size@{r\-\_\-array\-\_\-type\-\_\-size}!RArrayType@{R\-Array\-Type}}
+\paragraph[{r\-\_\-array\-\_\-type\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t r\-\_\-array\-\_\-type\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Array\-Type} $\ast$}]{type, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_array_type_a91fdc9370c7373eae37b12372042a9d6}
+
+
+Get the size of this array. 
+
+\begin{DoxyReturn}{Returns}
+the size of the array 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the type to get the size of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/array\-\_\-type.\-h\end{DoxyCompactItemize}

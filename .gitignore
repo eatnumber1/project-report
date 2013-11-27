@@ -1,0 +1,17 @@
+.*.swp
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.pyg
+*.pdf
+*.bcf
+*.fdb_latexmk
+*.fls
+*.run.xml
+*.synctex.gz
+pdflatex/refman.idx
+pdflatex/refman.ilg
+pdflatex/refman.ind
+pdflatex/refman.toc

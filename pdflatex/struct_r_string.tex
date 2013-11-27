@@ -1,0 +1,107 @@
+\hypertarget{struct_r_string}{\subsection{R\-String Struct Reference}
+\label{struct_r_string}\index{R\-String@{R\-String}}
+}
+
+
+An opaque struct representing a string.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_string}{R\-String} $\ast$ \hyperlink{struct_r_string_a16c711c95a1852b3315664834421e143}{r\-\_\-string\-\_\-ref} (\hyperlink{struct_r_string}{R\-String} $\ast$string)
+\begin{DoxyCompactList}\small\item\em Increase the reference count on this \hyperlink{struct_r_string}{R\-String}. \end{DoxyCompactList}\item 
+void \hyperlink{struct_r_string_a934c8be70f5c569cd25a0cf93304e17a}{r\-\_\-string\-\_\-unref} (\hyperlink{struct_r_string}{R\-String} $\ast$string)
+\begin{DoxyCompactList}\small\item\em Decrease the reference count on this \hyperlink{struct_r_string}{R\-String}. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{struct_r_string_aac90a2f2447899389bffdb05a249573e}{r\-\_\-string\-\_\-bytes} (\hyperlink{struct_r_string}{R\-String} $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get the C-\/style string (array of characters) backing this \hyperlink{struct_r_string}{R\-String}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{struct_r_string_a0a79ee2cc5a5db38f5841051f6591c5b}{r\-\_\-string\-\_\-length} (\hyperlink{struct_r_string}{R\-String} $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get the length of this \hyperlink{struct_r_string}{R\-String}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a string. 
+
+An \hyperlink{struct_r_string}{R\-String} is a reference counted array of characters. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_string_aac90a2f2447899389bffdb05a249573e}{\index{R\-String@{R\-String}!r\-\_\-string\-\_\-bytes@{r\-\_\-string\-\_\-bytes}}
+\index{r\-\_\-string\-\_\-bytes@{r\-\_\-string\-\_\-bytes}!RString@{R\-String}}
+\paragraph[{r\-\_\-string\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ r\-\_\-string\-\_\-bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-String} $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{struct_r_string_aac90a2f2447899389bffdb05a249573e}
+
+
+Get the C-\/style string (array of characters) backing this \hyperlink{struct_r_string}{R\-String}. 
+
+The behavior is undefined if this array is modified.
+
+\begin{DoxyReturn}{Returns}
+the array of characters backing this \hyperlink{struct_r_string}{R\-String} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & the string to get the array of characters of \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_string_a0a79ee2cc5a5db38f5841051f6591c5b}{\index{R\-String@{R\-String}!r\-\_\-string\-\_\-length@{r\-\_\-string\-\_\-length}}
+\index{r\-\_\-string\-\_\-length@{r\-\_\-string\-\_\-length}!RString@{R\-String}}
+\paragraph[{r\-\_\-string\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t r\-\_\-string\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-String} $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{struct_r_string_a0a79ee2cc5a5db38f5841051f6591c5b}
+
+
+Get the length of this \hyperlink{struct_r_string}{R\-String}. 
+
+\begin{DoxyReturn}{Returns}
+the length of this \hyperlink{struct_r_string}{R\-String} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & the string to get the length of \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_string_a16c711c95a1852b3315664834421e143}{\index{R\-String@{R\-String}!r\-\_\-string\-\_\-ref@{r\-\_\-string\-\_\-ref}}
+\index{r\-\_\-string\-\_\-ref@{r\-\_\-string\-\_\-ref}!RString@{R\-String}}
+\paragraph[{r\-\_\-string\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-String} $\ast$ r\-\_\-string\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-String} $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{struct_r_string_a16c711c95a1852b3315664834421e143}
+
+
+Increase the reference count on this \hyperlink{struct_r_string}{R\-String}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape string} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & the string to increase the reference count of \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_string_a934c8be70f5c569cd25a0cf93304e17a}{\index{R\-String@{R\-String}!r\-\_\-string\-\_\-unref@{r\-\_\-string\-\_\-unref}}
+\index{r\-\_\-string\-\_\-unref@{r\-\_\-string\-\_\-unref}!RString@{R\-String}}
+\paragraph[{r\-\_\-string\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-string\-\_\-unref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-String} $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{struct_r_string_a934c8be70f5c569cd25a0cf93304e17a}
+
+
+Decrease the reference count on this \hyperlink{struct_r_string}{R\-String}. 
+
+If the reference count of this \hyperlink{struct_r_string}{R\-String} drops to zero, the string will be freed. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & the string to decrease the reference count of \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/string.\-h\end{DoxyCompactItemize}

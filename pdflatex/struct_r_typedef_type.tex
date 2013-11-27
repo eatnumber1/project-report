@@ -1,0 +1,64 @@
+\hypertarget{struct_r_typedef_type}{\subsection{R\-Typedef\-Type Struct Reference}
+\label{struct_r_typedef_type}\index{R\-Typedef\-Type@{R\-Typedef\-Type}}
+}
+
+
+An opaque struct representing a typedef'ed type.  
+
+
+
+
+Inheritance diagram for R\-Typedef\-Type\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{struct_r_typedef_type__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_type}{R\-Type} $\ast$ \hyperlink{struct_r_typedef_type_afa3538fc4df5050ba3df60547f36536c}{r\-\_\-typedef\-\_\-type\-\_\-canonical} (\hyperlink{struct_r_typedef_type}{R\-Typedef\-Type} $\ast$, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the canonical type of this type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a typedef'ed type. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_typedef_type_afa3538fc4df5050ba3df60547f36536c}{\index{R\-Typedef\-Type@{R\-Typedef\-Type}!r\-\_\-typedef\-\_\-type\-\_\-canonical@{r\-\_\-typedef\-\_\-type\-\_\-canonical}}
+\index{r\-\_\-typedef\-\_\-type\-\_\-canonical@{r\-\_\-typedef\-\_\-type\-\_\-canonical}!RTypedefType@{R\-Typedef\-Type}}
+\paragraph[{r\-\_\-typedef\-\_\-type\-\_\-canonical}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Type} $\ast$ r\-\_\-typedef\-\_\-type\-\_\-canonical (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Typedef\-Type} $\ast$}]{, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_typedef_type_afa3538fc4df5050ba3df60547f36536c}
+
+
+Get the canonical type of this type. 
+
+A canonical type strips away all typedefs contained within this type.
+
+For example with the following code, 
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} \textcolor{keywordtype}{char} *String;
+\textcolor{keyword}{typedef} String *StringArray;
+\end{DoxyCode}
+ calling \hyperlink{struct_r_typedef_type_afa3538fc4df5050ba3df60547f36536c}{r\-\_\-typedef\-\_\-type\-\_\-canonical()} on a \hyperlink{struct_r_typedef_type}{R\-Typedef\-Type} representing a {\ttfamily String\-Array} will return an \hyperlink{struct_r_type}{R\-Type} representing {\ttfamily char $\ast$$\ast$}.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]Be able to single step through non-\/canonical types of an \hyperlink{struct_r_typedef_type}{R\-Typedef\-Type}. \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+An \hyperlink{struct_r_type}{R\-Type} representing the canonical type of this \hyperlink{struct_r_typedef_type}{R\-Typedef\-Type}. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/typedef\-\_\-type.\-h\end{DoxyCompactItemize}

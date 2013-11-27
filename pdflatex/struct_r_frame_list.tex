@@ -1,0 +1,116 @@
+\hypertarget{struct_r_frame_list}{\subsection{R\-Frame\-List Struct Reference}
+\label{struct_r_frame_list}\index{R\-Frame\-List@{R\-Frame\-List}}
+}
+
+
+An opaque struct representing a call stack.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{struct_r_frame_list_a9058fdf39e9738a3adf2379e767b3d20}{r\-\_\-frame\-\_\-list\-\_\-size} (\hyperlink{struct_r_frame_list}{R\-Frame\-List} $\ast$list, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get the number of elements in this frame list. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_frame}{R\-Frame} $\ast$ \hyperlink{struct_r_frame_list_ad39dc50f681a5576da3fb1d7b08398bd}{r\-\_\-frame\-\_\-list\-\_\-at} (\hyperlink{struct_r_frame_list}{R\-Frame\-List} $\ast$list, size\-\_\-t index, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get an \hyperlink{struct_r_frame}{R\-Frame} from this \hyperlink{struct_r_frame_list}{R\-Frame\-List}. \end{DoxyCompactList}\item 
+void \hyperlink{struct_r_frame_list_a7ed414a8b2cd92778f91e391bb9db882}{r\-\_\-frame\-\_\-list\-\_\-ref} (\hyperlink{struct_r_frame_list}{R\-Frame\-List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Increment the reference count on this \hyperlink{struct_r_frame_list}{R\-Frame\-List}. \end{DoxyCompactList}\item 
+void \hyperlink{struct_r_frame_list_ab2f57f2088ab983a15cfae4dd59fa80d}{r\-\_\-frame\-\_\-list\-\_\-unref} (\hyperlink{struct_r_frame_list}{R\-Frame\-List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Decrement the reference count of this \hyperlink{struct_r_frame_list}{R\-Frame\-List}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An opaque struct representing a call stack. 
+
+A call stack is a list of one or more \hyperlink{struct_r_frame}{R\-Frame} instances.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{struct_r_frame}{R\-Frame} 
+\end{DoxySeeAlso}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{struct_r_frame_list_ad39dc50f681a5576da3fb1d7b08398bd}{\index{R\-Frame\-List@{R\-Frame\-List}!r\-\_\-frame\-\_\-list\-\_\-at@{r\-\_\-frame\-\_\-list\-\_\-at}}
+\index{r\-\_\-frame\-\_\-list\-\_\-at@{r\-\_\-frame\-\_\-list\-\_\-at}!RFrameList@{R\-Frame\-List}}
+\paragraph[{r\-\_\-frame\-\_\-list\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Frame} $\ast$ r\-\_\-frame\-\_\-list\-\_\-at (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame\-List} $\ast$}]{list, }
+\item[{size\-\_\-t}]{index, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_list_ad39dc50f681a5576da3fb1d7b08398bd}
+
+
+Get an \hyperlink{struct_r_frame}{R\-Frame} from this \hyperlink{struct_r_frame_list}{R\-Frame\-List}. 
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{struct_r_frame}{R\-Frame} at index {\itshape index} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & the frame list to get an element from \\
+\hline
+\mbox{\tt in}  & {\em index} & the index of the \hyperlink{struct_r_frame}{R\-Frame} to get \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_list_a7ed414a8b2cd92778f91e391bb9db882}{\index{R\-Frame\-List@{R\-Frame\-List}!r\-\_\-frame\-\_\-list\-\_\-ref@{r\-\_\-frame\-\_\-list\-\_\-ref}}
+\index{r\-\_\-frame\-\_\-list\-\_\-ref@{r\-\_\-frame\-\_\-list\-\_\-ref}!RFrameList@{R\-Frame\-List}}
+\paragraph[{r\-\_\-frame\-\_\-list\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-frame\-\_\-list\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame\-List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_list_a7ed414a8b2cd92778f91e391bb9db882}
+
+
+Increment the reference count on this \hyperlink{struct_r_frame_list}{R\-Frame\-List}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & the frame list to increment the reference count of \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_list_a9058fdf39e9738a3adf2379e767b3d20}{\index{R\-Frame\-List@{R\-Frame\-List}!r\-\_\-frame\-\_\-list\-\_\-size@{r\-\_\-frame\-\_\-list\-\_\-size}}
+\index{r\-\_\-frame\-\_\-list\-\_\-size@{r\-\_\-frame\-\_\-list\-\_\-size}!RFrameList@{R\-Frame\-List}}
+\paragraph[{r\-\_\-frame\-\_\-list\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t r\-\_\-frame\-\_\-list\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame\-List} $\ast$}]{list, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_list_a9058fdf39e9738a3adf2379e767b3d20}
+
+
+Get the number of elements in this frame list. 
+
+\begin{DoxyReturn}{Returns}
+the number of elements in this frame list. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & the frame list to get the size of \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_frame_list_ab2f57f2088ab983a15cfae4dd59fa80d}{\index{R\-Frame\-List@{R\-Frame\-List}!r\-\_\-frame\-\_\-list\-\_\-unref@{r\-\_\-frame\-\_\-list\-\_\-unref}}
+\index{r\-\_\-frame\-\_\-list\-\_\-unref@{r\-\_\-frame\-\_\-list\-\_\-unref}!RFrameList@{R\-Frame\-List}}
+\paragraph[{r\-\_\-frame\-\_\-list\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}void r\-\_\-frame\-\_\-list\-\_\-unref (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Frame\-List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{struct_r_frame_list_ab2f57f2088ab983a15cfae4dd59fa80d}
+
+
+Decrement the reference count of this \hyperlink{struct_r_frame_list}{R\-Frame\-List}. 
+
+The \hyperlink{struct_r_frame_list}{R\-Frame\-List} will be freed if it's reference count drops to zero. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & the frame list to decrement the reference count of \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ruminate/frame.\-h\end{DoxyCompactItemize}
