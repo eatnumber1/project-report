@@ -23,7 +23,9 @@ Inheritance diagram for R\-Aggregate\-Type\-:\nopagebreak
 size\-\_\-t \hyperlink{struct_r_aggregate_type_a193960ea5996d7c1c7935b1525cf64c9}{r\-\_\-aggregate\-\_\-type\-\_\-nmembers} (\hyperlink{struct_r_aggregate_type}{R\-Aggregate\-Type} $\ast$type, G\-Error $\ast$$\ast$error)
 \begin{DoxyCompactList}\small\item\em Get the number of members in this aggregate type. \end{DoxyCompactList}\item 
 \hyperlink{struct_r_aggregate_member}{R\-Aggregate\-Member} $\ast$ \hyperlink{struct_r_aggregate_type_aea94153a211184cee889e445a7dd003a}{r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-at} (\hyperlink{struct_r_aggregate_type}{R\-Aggregate\-Type} $\ast$type, size\-\_\-t index, G\-Error $\ast$$\ast$error)
-\begin{DoxyCompactList}\small\item\em Get a aggregate's member at a specified index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get an aggregate's member at a specified index. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_aggregate_member}{R\-Aggregate\-Member} $\ast$ \hyperlink{struct_r_aggregate_type_aaedae83d9a40bc853240408346444d6c}{r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-by\-\_\-name} (\hyperlink{struct_r_aggregate_type}{R\-Aggregate\-Type} $\ast$type, const char $\ast$name, G\-Error $\ast$$\ast$error)
+\begin{DoxyCompactList}\small\item\em Get an aggregate's member by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -67,7 +69,7 @@ the child type of this aggregate type.
 )}}\label{struct_r_aggregate_type_aea94153a211184cee889e445a7dd003a}
 
 
-Get a aggregate's member at a specified index. 
+Get an aggregate's member at a specified index. 
 
 \begin{DoxyReturn}{Returns}
 a \hyperlink{struct_r_aggregate_member}{R\-Aggregate\-Member} representing the member of this aggregate at index {\itshape index}. 
@@ -77,6 +79,31 @@ a \hyperlink{struct_r_aggregate_member}{R\-Aggregate\-Member} representing the m
 \mbox{\tt in}  & {\em type} & the aggregate type to retrieve a member of \\
 \hline
 \mbox{\tt in}  & {\em index} & the index of the member \\
+\hline
+\mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_r_aggregate_type_aaedae83d9a40bc853240408346444d6c}{\index{R\-Aggregate\-Type@{R\-Aggregate\-Type}!r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-by\-\_\-name@{r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-by\-\_\-name}}
+\index{r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-by\-\_\-name@{r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-by\-\_\-name}!RAggregateType@{R\-Aggregate\-Type}}
+\paragraph[{r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-by\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Aggregate\-Member} $\ast$ r\-\_\-aggregate\-\_\-type\-\_\-member\-\_\-by\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Aggregate\-Type} $\ast$}]{type, }
+\item[{const char $\ast$}]{name, }
+\item[{G\-Error $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{struct_r_aggregate_type_aaedae83d9a40bc853240408346444d6c}
+
+
+Get an aggregate's member by name. 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_r_aggregate_member}{R\-Aggregate\-Member} representing the member of this aggregate with name {\itshape name}. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & the aggregate type to retrieve a member of \\
+\hline
+\mbox{\tt in}  & {\em name} & the name of the aggregate member \\
 \hline
 \mbox{\tt out}  & {\em error} & see \hyperlink{errors_8h}{errors.\-h} \\
 \hline
